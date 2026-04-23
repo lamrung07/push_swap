@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 10:02:09 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/22 11:26:23 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/04/23 10:58:24 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,10 @@ typedef struct s_stack
 }		t_stack;
 
 //ALGORITHME
-void	ft_sort3(t_stack **a);
-void	ft_sort(t_stack **a);
+void	ft_push_a_to_b(t_stack **a, t_stack **b);
+void	ft_assign_target_a(t_stack **a, t_stack **b);
+void	ft_sort_small(t_stack **a);
+void	ft_sort(t_stack **a, t_stack **b);
 
 //ARGS_PROCESSING
 int		ft_check_syntax(char *str);
@@ -50,6 +52,7 @@ void	ft_append(t_stack	**a, int data);
 int		ft_max(t_stack *a);
 int		ft_min(t_stack *a);
 int		ft_index(t_stack *a, int n);
+t_stack	*ft_find_value(t_stack *a, int n);
 
 //OPERATIONS
 void	ft_push(t_stack	**res, t_stack **des);

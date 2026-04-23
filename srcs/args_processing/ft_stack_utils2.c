@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 14:09:48 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/21 15:11:15 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/04/23 10:38:28 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,18 @@ int	ft_index(t_stack *a, int n)
 		res++;
 	}
 	return (-1);
+}
+
+t_stack	*ft_find_value(t_stack *a, int n)
+{
+	t_stack	*res;
+
+	res = a;
+	while (res)
+	{
+		if (res->data == n)
+			return (res);
+		res = res->next;
+	}
+	return (NULL);
 }

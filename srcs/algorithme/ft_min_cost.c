@@ -6,33 +6,32 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 10:43:54 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/22 11:27:11 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/04/23 10:29:47 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_cost(t_stack *current, t_stack *a, t_stack *b)
-{
-	t_stack *target;
-
+// int ft_cost(t_stack *current, t_stack *a, t_stack *b)
+// {
+// 	t_stack *target;
 	
-}
+// }
 
-int	ft_min_cost(t_stack *a, t_stack *b)
-{
-	t_stack	*current;
-	int		min_cost;
+// int	ft_min_cost(t_stack *a, t_stack *b)
+// {
+// 	t_stack	*current;
+// 	int		min_cost;
 
-	min_cost = INT_MAX;
-	current = a;
-	while (current)
-	{
-		if (min_cost > ft_cost(current, a, b))
-			min_cost = ft_cost(current, a, b);
-		if (min_cost <= 2)
-			return (min_cost);
-		current = current->next;
-	}
-	return (min_cost);
-}
+// 	min_cost = INT_MAX;
+// 	current = a;
+// 	while (current)
+// 	{
+// 		if (min_cost > ft_cost(current, a, b))
+// 			min_cost = ft_cost(current, a, b);
+// 		if (min_cost <= 2)
+// 			return (min_cost);
+// 		current = current->next;
+// 	}
+// 	return (min_cost);
+// }
