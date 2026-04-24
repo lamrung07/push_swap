@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 14:02:13 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/22 10:21:55 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/04/24 09:54:02 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ void	ft_sort_small(t_stack **a)
 		ft_sa(a);
 		return ;
 	}
-	if ((*a)->data == ft_max(*a))
+	if ((*a)->data == ft_max(*a)->data)
 	{
 		ft_ra(a);
 		if (!ft_checksorted(*a))
 			ft_sa(a);
 	}
-	else if ((*a)->data == ft_min(*a))
+	else if ((*a)->data == ft_min(*a)->data)
 	{
 		ft_rra(a);
 		ft_sa(a);

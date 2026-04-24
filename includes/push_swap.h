@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 10:02:09 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/23 10:58:24 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/04/24 09:46:58 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct s_stack
 {
 	int				data;
 	int				idx;
-	int				push_price;
+	int				push_cost;
 	struct s_stack	*prev;
 	struct s_stack	*next;
 	struct s_stack	*target;
