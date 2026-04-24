@@ -6,11 +6,26 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 14:09:48 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/24 10:20:23 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/04/24 17:22:26 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	ft_set_index(t_stack **a)
+{
+	t_stack	*head;
+	int		i;
+
+	i = 1;
+	head = (*a);
+	while (head)
+	{
+		head->idx = i;
+		i++;
+		head = head->next;
+	}
+}
 
 t_stack	*ft_max(t_stack *a)
 {
