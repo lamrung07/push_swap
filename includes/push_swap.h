@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 10:02:09 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/24 09:46:58 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/04/27 16:16:08 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,10 @@ typedef struct s_stack
 }		t_stack;
 
 //ALGORITHME
-void	ft_push_a_to_b(t_stack **a, t_stack **b);
-void	ft_assign_target_a(t_stack **a, t_stack **b);
-void	ft_sort_small(t_stack **a);
+void	ft_set_index(t_stack **a);
+void	ft_set_target_node_a(t_stack *node_a, t_stack **b);
+void	ft_set_cost_node_a(t_stack *current, t_stack *a, t_stack *b);
+void	ft_set_values_a(t_stack **a, t_stack **b);
 void	ft_sort(t_stack **a, t_stack **b);
 
 //ARGS_PROCESSING
@@ -40,6 +41,7 @@ int		ft_check_syntax(char *str);
 int		ft_duplicated(t_stack *a);
 void	ft_free_stack(t_stack	**a);
 void	ft_error(t_stack **a);
+int		ft_isspace(char c);
 long	ft_atol(const char *str);
 void	ft_make_stack(t_stack	**a, char	**argv);
 void	ft_append(t_stack	**a, int data);
@@ -49,11 +51,10 @@ int		ft_stacklen(t_stack *head);
 t_stack	*ft_last(t_stack *head);
 t_stack	*ft_new_node(int data);
 void	ft_append(t_stack	**a, int data);
-int		ft_max(t_stack *a);
-int		ft_min(t_stack *a);
-int		ft_index(t_stack *a, int n);
-t_stack	*ft_find_value(t_stack *a, int n);
-
+void	ft_set_index(t_stack **a);
+t_stack	*ft_max(t_stack *a);
+t_stack	*ft_min(t_stack *a);
+t_stack	*ft_find_val(t_stack *a, char *arg, int val);
 //OPERATIONS
 void	ft_push(t_stack	**res, t_stack **des);
 void	ft_pa(t_stack **a, t_stack **b);
