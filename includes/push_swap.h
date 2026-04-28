@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 10:02:09 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/28 16:59:13 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/04/28 17:36:37 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	ft_apply_rra_rrb(t_stack *node_a, t_stack **a, t_stack **b);
 void	ft_apply_ra_rrb(t_stack *node_a, t_stack **a, t_stack **b);
 void	ft_apply_rra_rb(t_stack *node_a, t_stack **a, t_stack **b);
 void	ft_bring_to_top_ab(t_stack **a, t_stack **b);
+void	ft_push_a_to_b(t_stack **a, t_stack **b);
 void	ft_set_rotate_type(t_stack *node_a, t_stack *a, t_stack *b);
 void	ft_set_index(t_stack **a);
 void	ft_set_target_node_a(t_stack *node_a, t_stack **b);
