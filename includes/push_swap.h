@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 10:02:09 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/27 16:16:08 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/04/28 16:59:13 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,22 @@ typedef struct s_stack
 	int				data;
 	int				idx;
 	int				push_cost;
+	char			*rotate_type;
 	struct s_stack	*prev;
 	struct s_stack	*next;
 	struct s_stack	*target;
 }		t_stack;
 
 //ALGORITHME
+int		ft_min_of_4(int a, int b, int c, int d);
+void	ft_apply_ra_rb(t_stack *node_a, t_stack **a, t_stack **b);
+void	ft_apply_rra_rrb(t_stack *node_a, t_stack **a, t_stack **b);
+void	ft_apply_ra_rrb(t_stack *node_a, t_stack **a, t_stack **b);
+void	ft_apply_rra_rb(t_stack *node_a, t_stack **a, t_stack **b);
+void	ft_bring_to_top_ab(t_stack **a, t_stack **b);
+void	ft_set_rotate_type(t_stack *node_a, t_stack *a, t_stack *b);
 void	ft_set_index(t_stack **a);
 void	ft_set_target_node_a(t_stack *node_a, t_stack **b);
-void	ft_set_cost_node_a(t_stack *current, t_stack *a, t_stack *b);
 void	ft_set_values_a(t_stack **a, t_stack **b);
 void	ft_sort(t_stack **a, t_stack **b);
 
@@ -55,6 +62,8 @@ void	ft_set_index(t_stack **a);
 t_stack	*ft_max(t_stack *a);
 t_stack	*ft_min(t_stack *a);
 t_stack	*ft_find_val(t_stack *a, char *arg, int val);
+t_stack	*ft_min_push_cost(t_stack **a);
+
 //OPERATIONS
 void	ft_push(t_stack	**res, t_stack **des);
 void	ft_pa(t_stack **a, t_stack **b);

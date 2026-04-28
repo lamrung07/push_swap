@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort.c                                          :+:      :+:    :+:   */
+/*   ft_algo_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/21 13:52:26 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/28 17:01:52 by ngulam           ###   ########.fr       */
+/*   Created: 2026/04/28 15:26:29 by ngulam            #+#    #+#             */
+/*   Updated: 2026/04/28 15:43:42 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_sort(t_stack **a, t_stack **b)
+int	ft_min_of_4(int a, int b, int c, int d)
 {
-	int		stack_len_a;
+	int	res;
 
-	stack_len_a = ft_stacklen(*a);
-	if (stack_len_a-- > 3 && ft_checksorted(*a) == 0)
-		ft_pb(a, b);
-	if (stack_len_a-- > 3 && ft_checksorted(*a) == 0)
-		ft_pb(a, b);
-	ft_set_values_a(a, b);
-	ft_bring_to_top_ab(a, b);
-	ft_set_values_a(a, b);
+	res = INT_MAX;
+	if (a <= res)
+		res = a;
+	if (b <= res)
+		res = b;
+	if (c <= res)
+		res = c;
+	if (d <= res)
+		res = d;
+	return (res);
 }

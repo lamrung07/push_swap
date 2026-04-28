@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 09:43:24 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/27 18:19:56 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/04/28 17:03:52 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	ft_printf_stack(t_stack	*a)
 		ft_printf("nothing");
 	while (a)
 	{
-		ft_printf ("%d target--> %d || push_cost : %d \n", a->data, a->target->data, a->push_cost);
+		ft_printf ("%d target--> %d || push_cost : %d || rotate_type : %s\n", 
+			a->data, a->target->data, a->push_cost, a->rotate_type);
 		a = a->next;
 	}
 	ft_printf("\n");
