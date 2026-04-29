@@ -6,7 +6,7 @@
 #    By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/13 09:05:10 by ngulam            #+#    #+#              #
-#    Updated: 2026/04/21 15:18:07 by ngulam           ###   ########.fr        #
+#    Updated: 2026/04/29 18:46:13 by ngulam           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@
 
 NAME   		= push_swap
 CC     		= cc
-CFLAGS 		= -Wall -Wextra -Werror -g -Iincludes #nho xoa -g truoc khi nop#
+CFLAGS 		= -Wall -Wextra -Werror -Iincludes #nho xoa -g truoc khi nop#
 RM     		= rm -f
 LIBFTDIR	= libft/
 SRC_DIR		= srcs/
