@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 10:02:09 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/29 11:12:38 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/04/29 17:59:46 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void	ft_set_values_a(t_stack **a, t_stack **b);
 void	ft_set_target_node_b(t_stack *node_b, t_stack **a);
 void	ft_set_values_b(t_stack **b, t_stack **a);
 void	ft_sort_small(t_stack **a);
+void	ft_re_arrange_a(t_stack **a);
 void	ft_sort(t_stack **a, t_stack **b);
 
 //ARGS_PROCESSING

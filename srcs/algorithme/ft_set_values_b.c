@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 10:12:23 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/29 11:11:20 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/04/29 18:00:55 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ void	ft_set_values_b(t_stack **b, t_stack **a)
 	current = (*b);
 	if (!current)
 		return ;
-	ft_set_index(a);
 	ft_set_index(b);
+	ft_set_index(a);
 	while (current)
 	{
 		ft_set_target_node_b(current, a);
