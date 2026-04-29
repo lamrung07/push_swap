@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 14:49:37 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/28 15:42:32 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/04/29 11:10:42 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	ft_case_rra_rb(t_stack *node_a, t_stack *a)
 	return (res);
 }
 
-void	ft_set_rotate_type(t_stack *node_a, t_stack *a, t_stack *b)
+void	ft_set_rotate_type_ab(t_stack *node_a, t_stack *a, t_stack *b)
 {
 	int	ra_rb;
 	int	rra_rrb;

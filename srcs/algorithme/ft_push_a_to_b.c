@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 10:19:18 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/28 17:36:41 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/04/29 10:05:39 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void	ft_push_a_to_b(t_stack **a, t_stack **b)
 {
 	while (ft_stacklen(*a) > 3 && ft_checksorted(*a) == 0)
 	{
+		ft_set_values_a(a, b);
 		ft_bring_to_top_ab(a, b);
 		ft_pb(a, b);
 	}

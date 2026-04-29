@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 09:43:24 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/28 17:03:52 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/04/29 11:17:38 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ void	ft_printf_stack(t_stack	*a)
 		ft_printf("nothing");
 	while (a)
 	{
-		ft_printf ("%d target--> %d || push_cost : %d || rotate_type : %s\n", 
-			a->data, a->target->data, a->push_cost, a->rotate_type);
+		ft_printf ("%d ", a->data);
 		a = a->next;
 	}
 	ft_printf("\n");
@@ -41,6 +40,7 @@ int	main(int argc, char **argv)
 	ft_make_stack(&a, argv);
 	if (ft_duplicated(a) == 1)
 		ft_error(&a);
+	ft_printf_stack(a);
 	ft_sort(&a, &b);
 	ft_printf_stack(a);
 	return (0);

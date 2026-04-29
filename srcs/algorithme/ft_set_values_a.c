@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 10:24:21 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/28 15:36:59 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/04/29 11:11:08 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	ft_set_values_a(t_stack **a, t_stack **b)
 	while (current)
 	{
 		ft_set_target_node_a(current, b);
-		ft_set_rotate_type(current, *a, *b);
+		ft_set_rotate_type_ab(current, *a, *b);
 		current = current->next;
 	}
 }
