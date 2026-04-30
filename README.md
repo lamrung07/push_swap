@@ -42,7 +42,7 @@ Compilation:
 
 1. Git clone into your computer
 2. Run "make" to compile the project
-3. using the command "./push_swap" follow by inputs (programme will display "Error\n" with unsuitable inputs)
+3. Using the command "./push_swap" follow by inputs to see the results (programme will display "Error\n" with unsuitable inputs)
 
 ## Resources
 My project is inspired a by the Push_swap project of A.Yigit Ogun from 42-Heilbronn. Besides, I also watched tutorial of sorting algorithms, push_swap tutorial in Youtube. In this project, AI and GDB are used to check debugging and find the segmentation faults. All the references are listed below.
