@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 09:43:24 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/29 19:32:45 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/05/08 16:06:17 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,11 @@ int	main(int argc, char **argv)
 	ft_make_stack(&a, argv);
 	if (ft_duplicated(a) == 1)
 		ft_error(&a);
-	ft_printf_stack(a);
+	// ft_printf_stack(a);
 	if (ft_checksorted(a) == 0)
 		ft_sort(&a, &b);
-	ft_printf_stack(a);
+	// ft_printf_stack(a);
+	// ft_printf_stack(b);
 	ft_free_stack(&a);
 	return (0);
 }

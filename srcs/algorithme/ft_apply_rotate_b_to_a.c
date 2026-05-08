@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 10:48:24 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/29 10:56:24 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/05/08 16:24:07 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_apply_rb_ra(t_stack *node_b, t_stack **b, t_stack **a)
 	while (node_b != (*b))
 		ft_rb(b);
 	while (target != (*a))
-		ft_rb(a);
+		ft_ra(a);
 }
 
 void	ft_apply_rrb_rra(t_stack *node_b, t_stack **b, t_stack **a)
