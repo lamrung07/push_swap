@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 09:42:57 by ngulam            #+#    #+#             */
-/*   Updated: 2026/05/15 11:04:14 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/05/15 11:09:50 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_free_matrix(char **argv)
 	int	i;
 
 	i = -1;
-	if (NULL == argv || NULL == *argv)
+	if (!argv || !*argv)
 		return ;
 	while (argv[i])
 		free(argv[i++]);
