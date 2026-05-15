@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 14:02:13 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/29 18:12:01 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/05/09 23:18:09 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,3 @@ void	ft_sort_small(t_stack **a)
 	if (ft_checksorted(*a) == 0)
 		ft_sa(a);
 }
-
-

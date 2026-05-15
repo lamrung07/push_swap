@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 10:54:26 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/16 16:56:28 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/05/15 10:54:25 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ long	ft_atol(const char *str)
 	return (res * sign);
 }
 
-void	ft_make_stack(t_stack	**a, char	**argv)
+void	ft_make_stack(t_stack **a, char	**argv, int argc)
 {
 	int		i;
 	long	k;
@@ -55,11 +55,15 @@ void	ft_make_stack(t_stack	**a, char	**argv)
 	while (argv[i])
 	{
 		if (ft_check_syntax(argv[i]) == 0)
-			ft_error(a);
+			ft_error(a, argv, argc);
 		k = ft_atol(argv[i]);
 		if (k > 2147483647 || k < -2147483648)
-			ft_error(a);
-		ft_append(a, k);	
+			ft_error(a, argv, argc);
+		if (ft_duplicated(*a))
+			ft_error(a, argv, argc);
+		ft_append (a, k);
 		i++;
 	}
+	if (argc == 2)
+		ft_free_matrix(argv);
 }

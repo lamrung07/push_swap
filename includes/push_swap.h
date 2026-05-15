@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 10:02:09 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/29 19:33:05 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/05/15 11:02:47 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
+# include <stddef.h>
 # include "../libft/libft.h"
 
 typedef struct s_stack
@@ -59,12 +60,14 @@ void	ft_sort(t_stack **a, t_stack **b);
 
 //ARGS_PROCESSING
 int		ft_check_syntax(char *str);
+void	ft_free_matrix(char **argv);
 int		ft_duplicated(t_stack *a);
 void	ft_free_stack(t_stack	**a);
-void	ft_error(t_stack **a);
+void	ft_error(t_stack **a, char **argv, int argc);
 int		ft_isspace(char c);
 long	ft_atol(const char *str);
-void	ft_make_stack(t_stack	**a, char	**argv);
+void	ft_make_stack(t_stack **a, char	**argv, int argc);
+char	**ft_split2(char *str, char sep);
 void	ft_append(t_stack	**a, int data);
 void	ft_printf_stack(t_stack	*a);
 int		ft_checksorted(t_stack *head);

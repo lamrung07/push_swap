@@ -6,7 +6,7 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 09:43:24 by ngulam            #+#    #+#             */
-/*   Updated: 2026/05/08 16:06:17 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/05/15 11:02:14 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,12 @@ int	main(int argc, char **argv)
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (1);
 	else if (argc == 2)
-		argv = ft_split(argv[1], ' ');
-	else
-		argv = argv + 1;
-	ft_make_stack(&a, argv);
+		argv = ft_split2(argv[1], ' ');
+	ft_make_stack(&a, argv + 1, argc);
 	if (ft_duplicated(a) == 1)
-		ft_error(&a);
-	// ft_printf_stack(a);
+		ft_error(&a, argv, argc);
 	if (ft_checksorted(a) == 0)
 		ft_sort(&a, &b);
-	// ft_printf_stack(a);
-	// ft_printf_stack(b);
 	ft_free_stack(&a);
 	return (0);
 }

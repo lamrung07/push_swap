@@ -6,11 +6,23 @@
 /*   By: ngulam <ngulam@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 09:42:57 by ngulam            #+#    #+#             */
-/*   Updated: 2026/04/16 16:57:27 by ngulam           ###   ########.fr       */
+/*   Updated: 2026/05/15 11:04:14 by ngulam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	ft_free_matrix(char **argv)
+{
+	int	i;
+
+	i = -1;
+	if (NULL == argv || NULL == *argv)
+		return ;
+	while (argv[i])
+		free(argv[i++]);
+	free(argv - 1);
+}
 
 int	ft_duplicated(t_stack *a) //1 : duplicated | 0 : no duplicated
 {
@@ -48,9 +60,11 @@ void	ft_free_stack(t_stack	**a)
 	*a = NULL;
 }
 
-void	ft_error(t_stack **a)
+void	ft_error(t_stack **a, char **argv, int argc)
 {
 	ft_free_stack(a);
+	if (argc == 2)
+		ft_free_matrix(argv);
 	write(2, "Error\n", 6);
 	exit(1);
 }
